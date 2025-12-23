@@ -29,19 +29,60 @@ let brand = prompt("Which computer brand would you like to buy?");
 let brandConverted = brand.toLowerCase();
 
 if (brandConverted == "apple") {
+    
     bag = {
         [brandConverted + "ComputerCost"]: '$2000',
         [brandConverted + "ReputationLevel"]: "5.0/5.0 star rating!",
     };
     alert(bag.appleComputerCost);
-    alert(bag.appleReputationLevel)
+    alert(bag.appleReputationLevel);
+
 } else if (brandConverted == "lenovo") {
+    
     bag = {
         [brandConverted + 'ComputerCost']: "$1500",
         [brandConverted + 'ReputationLevel']: "4.5/5.0 star rating!",
     };
     alert(bag.lenovoComputerCost);
-    alert(bag.lenovoReputationLevel)
+    alert(bag.lenovoReputationLevel);
+
 }
 
+// either THIS
+function makeUser(name, age, religion) {
+    return {
+        name: name,
+        age: age,
+        religion: religion,
+    }
+}
+
+let newUser = makeUser("Richard", 18, "Catholicism");
+alert(newUser.religion);
+alert(newUser.name);
+alert(newUser.age);
+
+// or THIS
+function remakeUser(name, age, religion) {
+    return {
+        name,
+        age,
+        religion,
+    }
+}
+let newUserTwo = remakeUser("Darryl", 18, "freethinker");
+alert(newUserTwo.religion);
+alert(newUserTwo.name);
+alert(newUserTwo.age);
+
+
+// no such restrictions as no 'for', 'let' or 'return' keys....
+let newObj = {
+    for: 1,
+    let: 2,
+    return: 3,
+    if: 4,
+}
+
+alert(newObj.for * newObj.let * newObj.return * newObj.if);
 
